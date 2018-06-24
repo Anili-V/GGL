@@ -1,4 +1,4 @@
-<form action=includes/login.php method="POST">
+<form action=login.php method="POST">
 	<input type="text" name="uid" placeholder="Username/e-mail">
 	<input type="password" name="pwd" placeholder="Password">
 	<button type="submit" name="submit">Login</button>
