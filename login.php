@@ -8,35 +8,33 @@ if (isset($_POST['submit'])) {
 
 	include 'database.php';
 
-	$uid = mysqli_real_escape_string($conn, $_POST['uid']);
+	$s_name = mysqli_real_escape_string($conn, $_POST['s_name']);
 	$pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
 
 	//Error Handlers
 	//Check if inputs are inputy
-	if (empty($uid) OR empty($pwd)){
+	if (empty($s_name) OR empty($pwd)){
 		$msg = 'Please fill in all fields';
 		$msgClass = 'alert-danger';
 	} else {
-		$sql = "SELECT * FROM users WHERE user_uid='$uid' OR user_email='$uid'";
+		$sql = "SELECT * FROM schools WHERE school_name='$s_name'";
 		$result = mysqli_query($conn, $sql);
 		$resultCheck = mysqli_num_rows($result);
 		if ($resultCheck < 1) {
-			$msg = 'Incorrect Username';
+			$msg = 'Incorrect Username/Password';
 			$msgClass = 'alert-danger';
 		} else {
 			if ($row = mysqli_fetch_assoc($result)){
 				//De-hashing the password
-				$hashedPwdCheck = password_verify($pwd, $row['user_pwd']);
+				$hashedPwdCheck = password_verify($pwd, $row['school_pwd']);
 				if ($hashedPwdCheck === false) {
-					$msg = 'Incorrect Password';
+					$msg = 'Incorrect Username/Password';
 					$msgClass = 'alert-danger';
 				} elseif ($hashedPwdCheck === true) {
 					//Login the user here
-					$_SESSION['u_id'] = $row['user_id'];
-					$_SESSION['u_first'] = $row['user_first'];
-					$_SESSION['u_last'] = $row['user_last'];
-					$_SESSION['u_email'] = $row['user_email'];
-					$_SESSION['u_uid'] = $row['user_uid'];
+					$_SESSION['s_id'] = $row['school_id'];
+					$_SESSION['s_email'] = $row['school_email'];
+					$_SESSION['s_name'] = $row['school_name'];
 					$msg = 'Logged In';
 					$msgClass = 'alert-success';
 				}
@@ -59,8 +57,8 @@ if (isset($_POST['submit'])) {
     	<?php endif; ?>
       <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 	      <div>
-		      <label>Username/Email</label>
-		      <input type="text" name="uid" value="<?php echo isset($_POST['uid']) ? $uid : ''; ?>">
+		      <label>Schoolname</label>
+		      <input type="text" name="s_name" value="<?php echo isset($_POST['s_name']) ? $s_name : ''; ?>">
 	      </div>
 	      <div>
 	      	<label>Password</label>
