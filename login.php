@@ -63,8 +63,8 @@ if (isset($_POST['submit'])) {
 		      <input type="text" name="uid" value="<?php echo isset($_POST['uid']) ? $uid : ''; ?>">
 	      </div>
 	      <div>
-	      	<label>Email</label>
-	      	<input type="text" name="pwd" value="<?php echo isset($_POST['pwd']) ? $pwd : ''; ?>"> <!-- In the code if an error occurs for one field than all the fields inputted data is deleted. So the value attribute checks whether some data has been inputted and if yes than the data is shown if no then it is blank (the input box is blank)-->
+	      	<label>Password</label>
+	      	<input type="password" name="pwd" value="<?php echo isset($_POST['pwd']) ? $pwd : ''; ?>"> <!-- In the code if an error occurs for one field than all the fields inputted data is deleted. So the value attribute checks whether some data has been inputted and if yes than the data is shown if no then it is blank (the input box is blank)-->
 	      </div>
 	      <br>
 	      <button type="submit" name="submit">Submit</button>
