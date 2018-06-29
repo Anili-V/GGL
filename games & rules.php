@@ -1,64 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style> 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {background-color: #111;
-    color: #ffa600;}
-
-
-#jo{width: 1353px;}
-#gj{font-family:comic sans MS;padding-left: 485px;}
-#go{font-family:comic sans MS;padding-left: 590px;}
-#gi{font-family:comic sans MS;}
- #h{
-    height: 350px;
-    width: 350px; border-radius: 50%;}
-#gk{font-family:comic sans MS;padding-left: 565px;}
-#gd{font-family:comic sans MS;padding-left: 540px;}
- #f{
-    height: 350px;
-    width: 350px;
-    padding-left: 470px;}
-</style>
-
-</head>
-<body>
-<img src="C:\Users\sanat\Desktop\oh my gifts! (3).png" id="jo">
-<ul>
-  <li><a class="active" href="#home" >HOME</a></li>
- 
-  <li><a href="#contact">REGISTRATION</a></li>
-  <li><a href="#about">CONTACT </a></li>
-  <li><a href="#news">GAMES & RULES</a></li>
-</ul><br>
-<br>
-<br>
-<br>
-<br>
+<?php include 'header.php'; ?>
 <H1 id="gj">PITHOO OR 7 stones</H1><br>
  
 
-    <center><img src="C:\Users\sanat\Desktop\images (2).jpg" id="h" ></center>
+    <center><img src="pithoo.png" id="h" ></center>
     
 <h1 id="gi"><B> Pithoo or seven stones, traditionally known as Pittu Garam, is a traditional South Asian game played between two teams. The game is called Lagori in kannada. The game requires a  ball and set of seven stones which can be stacked up to form a small tower. The aim of the game is to be able to break the tower and then rebuild it before getting hit by one of the opponent</B></h1>
 <br>
@@ -115,5 +59,4 @@ li a:hover {background-color: #111;
 <br>
 <br>
 <hr width="100%">
-</body>
-</html>
+<?php include 'footer.php'; ?>
