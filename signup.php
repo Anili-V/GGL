@@ -1,3 +1,4 @@
+<?php include 'header.php'; ?>
 <?php
 $msg = '';
 $msgClass = '';
@@ -10,14 +11,10 @@ if(isset($_POST['submit'])){
 	$email = mysqli_real_escape_string($conn, $_POST['email']);
 	$pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
 
-	//Error Handlers
-
 	if(empty($s_name) OR empty($email) OR empty($pwd)){
 		$msg = 'Please fill in all fields';
 		$msgClass = 'alert-danger';
 	} else{
-
-		// Check if email is valid
 		if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
 			$msg = 'Please enter valid Email';
 			$msgClass = 'alert-danger';
@@ -29,9 +26,7 @@ if(isset($_POST['submit'])){
 				$msg = 'This school has already been registered';
 				$msgClass = 'alert-danger';
 			} else{
-				//Hashing the password
 				$hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
-				//Insert the user into the databse
 				$sql = "INSERT INTO schools (school_name, school_email, school_pwd) VALUES ('$s_name', '$email', '$hashedPwd');";
 				mysqli_query($conn, $sql);
 				$msg = 'Registered';
@@ -72,3 +67,4 @@ if(isset($_POST['submit'])){
     </div>
 </body>
 </html>
+<?php include 'footer.php'; ?>
