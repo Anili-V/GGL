@@ -39,11 +39,10 @@ li a:hover {background-color: #111;
 <body>
 <img src="ggl.png" id="jo">
 <ul>
-  <li><a class="active" href="#home" >HOME</a></li>
-  <li><a href="#news">GAMES</a></li>
-  <li><a href="#contact">REGISTRATION</a></li>
-  <li><a href="#about">RULES</a></li>
-  <li><a href="#about">CONTACT </a></li>
+  <li><a class="active" href="index.php" >HOME</a></li>
+  <li><a href="signup.php">REGISTRATION</a></li>
+  <li><a href="games & rules.php">GAMES & RULES</a></li>
+  <li><a href="contact.php">CONTACT </a></li>
 </ul><br>
 <br>
 <br>
