@@ -37,7 +37,7 @@ li a:hover {background-color: #111;
 
 </head>
 <body>
-<img src="C:\Users\sanat\Desktop\ggl.png" id="jo">
+<img src="ggl.png" id="jo">
 <ul>
   <li><a class="active" href="#home" >HOME</a></li>
   <li><a href="#news">GAMES</a></li>
