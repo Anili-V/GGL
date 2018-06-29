@@ -41,7 +41,7 @@
 <br>
 <br>
 <br><H1 id="gd">THE COURT</H1><br>
-<img src="C:\Users\sanat\Desktop\210px-Hopscotch1900F294.svg.png" id="f" >
+<img src="hopscotchField.png" id="f" >
 <h1 id="gi"><B>1) To play hopscotch, a court is first laid out on the ground. Depending on the available surface, the court is either scratched out in the dirt or drawn with chalk on pavement. Courts may be permanently marked where playgrounds are commonly paved, as in elementary schools. Designs vary, but the court is usually composed of a series of linear squares interspersed with blocks of two lateral squares. <br><br>2) Traditionally the court ends with a "safe" or "home" base in which the player may turn before completing the reverse trip. The home base may be a square, a rectangle, or a semicircle. The squares are then numbered in the sequence in which they are to be hopped.</B></h1><br>
 <br>
 <br>
