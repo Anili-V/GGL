@@ -35,7 +35,7 @@
 <H1 id="gj">STAPU OR HOPSCOTCH</H1><br>
  
 
-    <center><img src="C:\Users\sanat\Desktop\images.png" id="h" ></center>
+    <center><img src="hopscotch.png" id="h" ></center>
     
 <h1 id="gi"><B> Hopscotch is a children's game that can be played with several players or alone. Hopscotch is a popular playground game in which players toss a small object into numbered triangles or a pattern of rectangles outlined on the ground and then hop or jump through the spaces to retrieve the object.</B></h1>
 <br>
