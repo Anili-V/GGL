@@ -42,14 +42,27 @@ if (isset($_POST['submit'])) {
 		}
 	}
 }
-
 ?>
-<!DOCTYPE html>
-<html>
+<?php include 'header.php'; ?>
 <head>
 	<title>Login</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
+<style>
+	input{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+input:focus {
+    border: 3px solid #555;
+}
+</style>
 <body>
     <div>	
     	<?php if($msg != ''): ?>
@@ -57,16 +70,15 @@ if (isset($_POST['submit'])) {
     	<?php endif; ?>
       <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 	      <div>
-		      <label>Schoolname</label>
+		      <label>Schoolname</label><br>
 		      <input type="text" name="s_name" value="<?php echo isset($_POST['s_name']) ? $s_name : ''; ?>">
 	      </div>
 	      <div>
-	      	<label>Password</label>
-	      	<input type="password" name="pwd" value="<?php echo isset($_POST['pwd']) ? $pwd : ''; ?>"> <!-- In the code if an error occurs for one field than all the fields inputted data is deleted. So the value attribute checks whether some data has been inputted and if yes than the data is shown if no then it is blank (the input box is blank)-->
+	      	  <label>Password</label><br>
+	      	  <input type="password" name="pwd" value="<?php echo isset($_POST['pwd']) ? $pwd : ''; ?>"> <!-- In the code if an error occurs for one field than all the fields inputted data is deleted. So the value attribute checks whether some data has been inputted and if yes than the data is shown if no then it is blank (the input box is blank)-->
 	      </div>
 	      <br>
 	      <button type="submit" name="submit">Submit</button>
       </form>
     </div>
-</body>
-</html>
+<?php include 'footer.php'; ?>
