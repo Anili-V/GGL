@@ -51,13 +51,27 @@
 		}
 	}
 ?>
-
-<!DOCTYPE html>
-<html>
+<?php include 'header.php'; ?>
 <head>
 	<title>Contact Us</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
+<style>
+	input{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input:focus {
+    border: 3px solid #555;
+}
+</style>
 <body>
     <div>	
     	<?php if($msg != ''): ?>
@@ -65,20 +79,19 @@
     	<?php endif; ?>
       <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 	      <div>
-		      <label>Name</label>
+		      <label>Name</label><br>
 		      <input type="text" name="name" value="<?php echo isset($_POST['name']) ? $name : ''; ?>">
 	      </div>
 	      <div>
-	      	<label>Email</label>
+	      	<label>Email</label><br>
 	      	<input type="text" name="email" value="<?php echo isset($_POST['email']) ? $email : ''; ?>">
 	      </div>
 	      <div>
-	      	<label>Message</label>
+	      	<label>Message</label><br>
 	      	<textarea name="message"><?php echo isset($_POST['message']) ? $message : ''; ?></textarea>
 	      </div>
 	      <br>
 	      <button type="submit" name="submit">Submit</button>
       </form>
     </div>
-</body>
-</html>
+<?php include 'footer.php'; ?>
