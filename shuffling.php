@@ -6,7 +6,7 @@ if(! $conn) {
 echo 'Connected successfully<br>';
 $sql='SELECT * FROM table';
 $result=mysqli_query($conn, $sql);
-$participants=array($result);
+$participants=$result;
   shuffle($participants);
 foreach($participants as $participant) {
       echo "$participant";
