@@ -43,6 +43,7 @@ li a:hover {background-color: #111;
   <li><a href="signup.php">REGISTRATION</a></li>
   <li><a href="games & rules.php">GAMES & RULES</a></li>
   <li><a href="contact.php">CONTACT </a></li>
+  <li><a href="login.php">LOGIN</a></li>
 </ul><br>
 <br>
 <br>
