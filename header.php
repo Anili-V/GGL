@@ -29,9 +29,11 @@ li a:hover {background-color: #111;
 
 #jo{width: 1340px;}
 #gj{font-family:comic sans MS;padding-left: 550px;}
+#gs font-family:comic sans MS;padding-left: 514px;}
 #go{font-family:comic sans MS;padding-left: 590px;}
 #gh{font-family:comic sans MS;padding-left: 470px;}
-#gi{font-family:comic sans MS;}
+#gi{font-family:comic sans MS;padding-left: 540px;}
+#gk{font-family:comic sans MS;}
 
 </style>
 
